@@ -1,0 +1,13 @@
+name: learning contexts
+on: 
+    push: 
+        branches: 
+            main
+jobs:
+    contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: context1
+              run: echo "${{ github.job }}"
+            - name: context2
+              run: echo "${{ github.actor }}"
