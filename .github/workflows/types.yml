@@ -16,9 +16,10 @@ jobs:
             - name: step1
               env:
                 step_level_variable: these are step_level_variable
-                org_name: sridavidsurya
               run: echo ${{ env.global_env_variable }} ${{ env.job_level_variable }} ${{ env.step_level_variable }}
             - name: step2
+              env:
+                  org_name: sridavidsurya
               run: echo ${{ env.org_name}}
              
                 
