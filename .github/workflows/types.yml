@@ -1,0 +1,24 @@
+name: Typesofvariables
+on: 
+    push: 
+        branches: 
+            main
+env:
+   global_env_variable: these are global variables
+   org_name: sri
+jobs:
+    var:
+        runs-on: ubuntu-latest
+        env:
+            job_level_variable: these are job_level_variable
+            org_name1: sridavid
+        steps:
+            - name: step1
+              env:
+                step_level_variable: these are step_level_variable
+                org_name2: sridavidsurya
+              run: echo ${{ env.global_env_variable }} ${{ env.job_level_variable }} ${{ env.step_level_variable }}
+            - name: step2
+              run: echo ${{ env.org_name}} ${{ env.org_name1 }}
+             
+                
