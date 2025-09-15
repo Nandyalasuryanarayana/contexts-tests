@@ -11,9 +11,9 @@ jobs:
         steps:
             - id: step1
               name: directing to object 
-              run: echo true='this is discipline' >> $github_outputs
+              run: echo true='this is discipline' >> $GITHUB_OUTPUT
             - name: output of step1
-              run: echo ${{ steps.step1.outputs.github_outputs.true }}
+              run: echo ${{ steps.step1.outputs.GITHUB_OUTPUT.true }}
     job1:
         needs: job
         runs-on: ubuntu-latest
