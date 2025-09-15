@@ -7,7 +7,7 @@ jobs:
     job:
         runs-on: ubuntu-latest
         outputs:
-            goal: focus
+            goal : focus
         steps:
             - id: step1
               name: directing to object 
@@ -19,6 +19,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: jobs output
-              run: echo ${{ job.status.outputs.goal }}
+              run: echo ${{ needs.job.outputs.goal }}
 
         
